@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend Corp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌴 Weekend Corp 🌴</h1>
+            <p class="subtitle">Un week-end avec les copains</p>
+        </header>
+
+        <nav class="nav-tabs">
+            <button class="nav-tab active" onclick="showSection('planning')">📅 Planning</button>
+            <button class="nav-tab" onclick="showSection('participants')">👥 Participants</button>
+            <button class="nav-tab" onclick="showSection('materiel')">🎒 Matériel</button>
+            <button class="nav-tab" onclick="showSection('courses')">🛒 Courses</button>
+            <button class="nav-tab" onclick="showSection('budget')">💰 Budget</button>
+        </nav>
+
+        <main>
+            <!-- Section Planning -->
+            <section id="planning" class="section active">
+                <h2>📅 Planning du Week-end</h2>
+                
+                <div class="day-section">
+                    <h3>🌅 Vendredi</h3>
+                    <div class="activities-grid">
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🏠 Arrivée chez Néo</h4>
+                                <span class="time">Soirée</span>
+                            </div>
+                            <p>Arrivée de ceux qui peuvent, directement chez Néo pour commencer le week-end tranquille. Manger BK le soir</p>
+                            <div class="activity-footer">
+                                <span class="budget">10-15€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-section">
+                    <h3>🌅 Samedi</h3>
+                    <div class="activities-grid">
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🧗‍♂️ Accrobranche</h4>
+                                <span class="time">10h00</span>
+                            </div>
+                            <p>Parcours aventure dans les arbres avec baudrier.</p>
+                            <div class="activity-footer">
+                                <span class="budget">20€/pers</span>
+                                <a href="https://www.accrobranche-besancon.com/calendrier-tarifs" target="_blank">Site du lieu</a>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🧺 Barbecue chez Néo</h4>
+                                <span class="time">13h00</span>
+                            </div>
+                            <p>Repas consistant après l'accrobranche.</p>
+                            <div class="activity-footer">
+                                <span class="budget">10€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🎨 Création de porte-clés</h4>
+                                <span class="time">15h00</span>
+                            </div>
+                            <p>Atelier DIY avec plastique fou.</p>
+                            <div class="activity-footer">
+                                <span class="budget">2,50€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>📸 Concours de photos</h4>
+                                <span class="time">17h00</span>
+                            </div>
+                            <p>Défis photo en solo ou en équipe.</p>
+                            <div class="activity-footer">
+                                <span class="budget">2€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🍹 Cocktails & apéro</h4>
+                                <span class="time">19h00</span>
+                            </div>
+                            <p>Préparation de cocktails, avec ou sans alcool.</p>
+                            <div class="activity-footer">
+                                <span class="budget">7,50€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🌯 Atelier wraps insolites</h4>
+                                <span class="time">20h30</span>
+                            </div>
+                            <p>Repas créatif avec ingrédients classiques et surprises.</p>
+                            <div class="activity-footer">
+                                <span class="budget">6€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🎬 Concours de mini-films</h4>
+                                <span class="time">21h30</span>
+                            </div>
+                            <p>Réalisation en équipe de petits courts-métrages.</p>
+                            <div class="activity-footer">
+                                <span class="budget">0€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🎲 Jeux de société</h4>
+                                <span class="time">22h30</span>
+                            </div>
+                            <p>Soirée jeux détente, ambiance ou réflexion.</p>
+                            <div class="activity-footer">
+                                <span class="budget">0€/pers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-section">
+                    <h3>🌅 Dimanche</h3>
+                    <div class="activities-grid">
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>☕ Petit-déjeuner</h4>
+                                <span class="time">9h30</span>
+                            </div>
+                            <p>Moment calme pour commencer la journée.</p>
+                            <div class="activity-footer">
+                                <span class="budget">3€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🏖️ Baignade / détente</h4>
+                                <span class="time">10h00</span>
+                            </div>
+                            <p>Détente au bord de l'eau, baignade libre.</p>
+                            <div class="activity-footer">
+                                <span class="budget">2€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🍳 Brunch / déjeuner</h4>
+                                <span class="time">13h00</span>
+                            </div>
+                            <p>Brunch copieux pour clôturer le week-end.</p>
+                            <div class="activity-footer">
+                                <span class="budget">6€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🖼️ Visionnage photos/films</h4>
+                                <span class="time">14h30</span>
+                            </div>
+                            <p>Projection et votes sur les photos et vidéos créées.</p>
+                            <div class="activity-footer">
+                                <span class="budget">0€/pers</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-card">
+                            <div class="activity-header">
+                                <h4>🧹 Rangement / départ</h4>
+                                <span class="time">16h00</span>
+                            </div>
+                            <p>Nettoyage, rangement, remerciements.</p>
+                            <div class="activity-footer">
+                                <span class="budget">0€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Participants -->
+            <section id="participants" class="section">
+                <h2>👥 Participants</h2>
+                <div class="participants-grid">
+                    <div class="participant confirmed">
+                        <span class="participant-name">Gaël</span>
+                        <span class="status">✅ Confirmé</span>
+                    </div>
+                    <div class="participant confirmed">
+                        <span class="participant-name">Manon</span>
+                        <span class="status">✅ Confirmé</span>
+                    </div>
+                    <div class="participant confirmed">
+                        <span class="participant-name">Gerg</span>
+                        <span class="status">✅ Confirmé</span>
+                    </div>
+                    <div class="participant confirmed">
+                        <span class="participant-name">Benjamin</span>
+                        <span class="status">✅ Confirmé</span>
+                    </div>
+                    <div class="participant confirmed">
+                        <span class="participant-name">Léo</span>
+                        <span class="status">✅ Confirmé</span>
+                    </div>
+                    <div class="participant confirmed">
+                        <span class="participant-name">Néo</span>
+                        <span class="status">✅ Confirmé</span>
+                    </div>
+                    <div class="participant pending">
+                        <span class="participant-name">Chris</span>
+                        <span class="status">❓ À confirmer</span>
+                    </div>
+                    <div class="participant pending">
+                        <span class="participant-name">Alexis</span>
+                        <span class="status">❓ À confirmer</span>
+                    </div>
+                </div>
+
+                    <div class="themes-section">
+        <h3>🎬 Idées de thèmes pour les mini-films</h3>
+        <ul>
+            <li>Publicité décalée</li>
+            <li>Parodie de film culte</li>
+            <li>Super héros improbables</li>
+            <li>Retour vers le passé</li>
+            <li>La pire émission télé possible</li>
+            <li>Course-poursuite au ralenti</li>
+            <li>La journée d'un objet</li>
+            <li>Film d'horreur mignon</li>
+            <li>Impro muette</li>
+            <li>Un secret révélé</li>
+        </ul>
+
+        <h3>📸 Idées de thèmes pour les photos</h3>
+        <ul>
+            <li>Selfie inversé</li>
+            <li>Double personnage</li>
+            <li>Perspective trompeuse</li>
+            <li>Photo improbable</li>
+            <li>Émotion extrême</li>
+            <li>Couleur dominante</li>
+            <li>Pose statue vivante</li>
+            <li>Inversion des rôles</li>
+            <li>Légende improbable</li>
+            <li>Détournement d'objet</li>
+        </ul>
+
+        <h3>🎨 Idées pour les porte-clés</h3>
+        <ul>
+            <li>Mini-portrait rigolo</li>
+            <li>Objet fétiche du week-end</li>
+            <li>Symbole commun : logo "Weekend Corp"</li>
+            <li>Mot ou mantra perso</li>
+            <li>Souvenir du lieu</li>
+            <li>Animal totem</li>
+            <li>Emoji favori</li>
+            <li>Dessin enfantin volontaire</li>
+            <li>Clé USB imaginaire</li>
+            <li>Porte-clé énigme</li>
+        </ul>
+    </div>
+</section>
+            </section>
+
+            <!-- Section Matériel -->
+            <section id="materiel" class="section">
+                <h2>🎒 Matériel à prévoir</h2>
+                <div class="materiel-grid">
+                    <div class="materiel-category">
+                        <h3>🧗‍♂️ Accrobranche</h3>
+                        <ul>
+                            <li>Tenue de sport / baskets</li>
+                            <li>Gourde d'eau</li>
+                            <li>Caméra / GoPro (optionnel)</li>
+                            <li>Petits sacs à dos individuels</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🧺 Barbecue</h3>
+                        <ul>
+                            <li>Barbecue / plancha</li>
+                            <li>Charbon de bois / gaz</li>
+                            <li>Pinces, spatules</li>
+                            <li>Assiettes, couverts</li>
+                            <li>Serviettes</li>
+                            <li>Sacs poubelle</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🎨 Création porte-clés</h3>
+                        <ul>
+                            <li>Feuilles de plastique fou</li>
+                            <li>Feutres indélébiles (Posca, Sharpie)</li>
+                            <li>Perforatrice, ciseaux</li>
+                            <li>Four + plaque + papier cuisson</li>
+                            <li>Anneaux porte-clés</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>📸 Concours photos</h3>
+                        <ul>
+                            <li>Téléphones ou appareils photo</li>
+                            <li>Accessoires fun : lunettes, chapeaux, perruques</li>
+                            <li>Liste de thèmes / défis</li>
+                            <li>Album partagé (Google Photos, etc.)</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🍹 Cocktails</h3>
+                        <ul>
+                            <li>Shaker, cuillères longues</li>
+                            <li>Verres, pailles</li>
+                            <li>Glaçons / glace pilée</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🌯 Atelier wraps</h3>
+                        <ul>
+                            <li>Planches, couteaux, assiettes</li>
+                            <li>Sacs poubelle</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🎬 Mini-films</h3>
+                        <ul>
+                            <li>Téléphones / caméras</li>
+                            <li>Accessoires déguisement</li>
+                            <li>Liste de thèmes à tirer au sort</li>
+                            <li>Appli montage rapide (CapCut, InShot)</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🎲 Jeux de société</h3>
+                        <ul>
+                            <li>Uno, Dobble, Loups-Garous, Codenames</li>
+                            <li>Table et sièges</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>☕ Petit-déjeuner</h3>
+                        <ul>
+                            <li>Cafetière / bouilloire</li>
+                            <li>Tasses, cuillères</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🏖️ Baignade</h3>
+                        <ul>
+                            <li>Maillot, serviette, crème solaire</li>
+                            <li>Jeux d'eau (paddle, frisbee, ballon)</li>
+                            <li>Enceinte</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🍳 Brunch</h3>
+                        <ul>
+                            <li>Vaisselle</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🖼️ Visionnage</h3>
+                        <ul>
+                            <li>Écran ou ordi</li>
+                            <li>Album partagé prêt</li>
+                        </ul>
+                    </div>
+                    <div class="materiel-category">
+                        <h3>🧹 Rangement</h3>
+                        <ul>
+                            <li>Sacs poubelles</li>
+                            <li>Chiffons / éponges</li>
+                            <li>Musique de fin douce 🎶</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Courses -->
+            <section id="courses" class="section">
+                <h2>🛒 Liste des courses (8-10 pers)</h2>
+                <div class="courses-grid">
+                    <div class="course-category">
+                        <h3>🧷 Accrobranche</h3>
+                        <ul>
+                            <li>20 barres de céréales ou fruits secs</li>
+                            <li>10 bouteilles d'eau 50cl (si pas de gourde)</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3>🮺 Barbecue</h3>
+                        <ul>
+                            <li>30 viandes : merguez, saucisses, steaks</li>
+                            <li>4 courgettes</li>
+                            <li>4 poivrons</li>
+                            <li>6 tomates</li>
+                            <li>5 baguettes</li>
+                            <li>Sauces : ketchup, moutarde, mayo</li>
+                            <li>2 salades vertes</li>
+                            <li>10 tomates pour salade</li>
+                            <li>10 boissons fraîches (sodas, eaux)</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3>🎨 Porte-clés</h3>
+                        <ul>
+                            <li>10 feuilles plastique fou</li>
+                            <li>10 anneaux / chaînes</li>
+                            <li>Feutres (compléter si besoin)</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3>📸 Concours photos</h3>
+                        <ul>
+                            <li>10 accessoires déguisement (chapeaux, lunettes, perruques)</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3>🍹 Cocktails (hors alcool)</h3>
+                        <ul>
+                            <li>2L jus citron</li>
+                            <li>2L jus ananas</li>
+                            <li>2L jus orange</li>
+                            <li>Sirop menthe, grenadine</li>
+                            <li>10 citrons verts</li>
+                            <li>500g de fraises</li>
+                            <li>1 bouquet de menthe</li>
+                            <li>500g de sucre</li>
+                            <li>1 pot de sel pour cocktails</li>
+                            <li>5kg de glaçons</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3>🌯 Atelier wraps</h3>
+                        <ul>
+                            <li>20 galettes wraps</li>
+                            <li>500g de fromage frais</li>
+                            <li>6 tomates</li>
+                            <li>2 salades</li>
+                            <li>10 steaks hachés</li>
+                            <li>2 boîtes haricots rouges épicés</li>
+                            <li>2 paquets de chips</li>
+                            <li>Sauces variées</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3>☕ Petit-déjeuner</h3>
+                        <ul>
+                            <li>2 pains de mie / 1kg de brioche</li>
+                            <li>2 pots de confiture</li>
+                            <li>1 pot de Nutella</li>
+                            <li>3L de jus de fruits</li>
+                            <li>1 paquet de café</li>
+                            <li>1 boîte de thé</li>
+                            <li>2L de lait</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3>🏖️ Baignade</h3>
+                        <ul>
+                            <li>5 boissons fraîches</li>
+                            <li>2 boîtes de glaces</li>
+                        </ul>
+                    </div>
+                    <div class="course-category">
+                        <h3>🍳 Brunch</h3>
+                        <ul>
+                            <li>20 œufs</li>
+                            <li>500g de bacon</li>
+                            <li>500g de fromage</li>
+                            <li>4 baguettes ou 2 paquets de toasts</li>
+                            <li>2kg de fruits variés</li>
+                            <li>3L de jus</li>
+                            <li>20 viennoiseries/pâtisseries</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Budget -->
+            <section id="budget" class="section">
+                <h2>💰 Budget détaillé</h2>
+                <div class="budget-summary">
+                    <div class="budget-total">
+                        <h3>Total estimé par personne (hors alcool)</h3>
+                        <div class="total-amount">64€</div>
+                    </div>
+                </div>
+                <div class="budget-breakdown">
+                    <div class="budget-item">
+                        <span class="activity">🏠 Vendredi soir (BK)</span>
+                        <span class="amount">15€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">🧷 Accrobranche</span>
+                        <span class="amount">20€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">🮺 Barbecue chez Néo</span>
+                        <span class="amount">10€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">🎨 Création porte-clés</span>
+                        <span class="amount">2,50€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">📸 Concours photos</span>
+                        <span class="amount">2€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">🍹 Cocktails & apéro (hors alcool)</span>
+                        <span class="amount">2,50€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">🌯 Atelier wraps</span>
+                        <span class="amount">6€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">🎬 Mini-films</span>
+                        <span class="amount">1€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">🎲 Jeux société</span>
+                        <span class="amount">1€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">☕ Petit-déjeuner</span>
+                        <span class="amount">3€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">🏖️ Baignade</span>
+                        <span class="amount">2€</span>
+                    </div>
+                    <div class="budget-item">
+                        <span class="activity">🍳 Brunch</span>
+                        <span class="amount">6€</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
