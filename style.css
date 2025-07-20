@@ -515,3 +515,150 @@ header h1 {
     background: rgba(50, 205, 50, 0.2);
     transform: translateX(5px);
 }
+
+/* --- Liste de courses stylée --- */
+.courses-grid ul {
+    background: linear-gradient(120deg, var(--gray-light) 60%, var(--vert-lime) 100%);
+    border-radius: 18px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 24px var(--shadow);
+    font-size: 1.15rem;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 900px;
+    column-gap: 40px;
+}
+
+.courses-grid li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(50,205,50,0.05);
+    border: 1.5px solid transparent;
+}
+
+.courses-grid li:hover {
+    background: var(--jaune-ananas);
+    border-color: var(--vert-palmier);
+    box-shadow: 0 4px 16px var(--shadow);
+}
+
+.courses-grid input[type="checkbox"] {
+    accent-color: var(--vert-palmier);
+    width: 22px;
+    height: 22px;
+    margin-right: 16px;
+    border-radius: 6px;
+    border: 2px solid var(--vert-palmier);
+    box-shadow: 0 2px 6px var(--shadow);
+    transition: accent-color 0.2s;
+}
+
+.courses-grid input[type="checkbox"]:checked + span,
+.courses-grid input[type="checkbox"]:checked {
+    text-decoration: line-through;
+    color: var(--gray-light);
+    opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+    .courses-grid ul {
+        padding: 18px 5px;
+        font-size: 1rem;
+        columns: 1 !important;
+    }
+    .courses-grid li {
+        padding: 8px 6px;
+    }
+}
+
+/* --- Section Budget stylée --- */
+#budget.section {
+    background: linear-gradient(120deg, var(--gray-light) 60%, var(--vert-lime) 100%);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px var(--shadow);
+    padding: 40px 30px 35px 30px;
+    margin-bottom: 40px;
+}
+
+#budget h2 {
+    color: var(--orange-mangue);
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 3px var(--shadow);
+}
+
+#budget .budget-summary {
+    margin-bottom: 25px;
+    gap: 30px;
+}
+
+#budget .budget-summary > div {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px var(--shadow);
+    padding: 22px 18px 18px 18px;
+    margin-bottom: 0;
+    min-width: 240px;
+    border: 2.5px solid var(--vert-palmier);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+#budget .budget-summary > div:nth-child(2) { border-color: var(--orange-mangue); }
+#budget .budget-summary > div:nth-child(3) { border-color: var(--rose-hibiscus); }
+
+#budget h3 {
+    color: var(--vert-palmier);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+#budget ul {
+    margin-bottom: 10px;
+}
+
+#budget li {
+    margin-bottom: 7px;
+    font-size: 1.08rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#budget .total-amount {
+    color: var(--orange-mangue);
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin: 18px 0 0 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px var(--shadow);
+}
+
+#budget .total-per-person {
+    display: inline-block;
+    background: var(--vert-palmier);
+    color: var(--white);
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 18px;
+    padding: 7px 22px;
+    margin: 15px 0 0 0;
+    box-shadow: 0 2px 8px var(--shadow);
+    letter-spacing: 0.5px;
+}
+
+#budget p {
+    margin-top: 18px;
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    #budget .budget-summary { flex-direction: column; gap: 18px; }
+    #budget .budget-summary > div { min-width: unset; }
+}

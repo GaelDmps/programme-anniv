@@ -31,31 +31,30 @@ function showSection(sectionId) {
 }
 
 // Fonction pour calculer le budget total
-function calculateTotalBudget() {
-    const budgetItems = [
-        { name: 'Accrobranche', amount: 20 },
-        { name: 'Pique-nique', amount: 5 },
-        { name: 'Création porte-clés', amount: 2.5 },
-        { name: 'Concours photos', amount: 2 },
-        { name: 'Cocktails & apéro', amount: 7.5 },
-        { name: 'Atelier wraps', amount: 6 },
-        { name: 'Mini-films', amount: 1 },
-        { name: 'Jeux société', amount: 1 },
-        { name: 'Petit-déjeuner', amount: 3 },
-        { name: 'Baignade', amount: 2 },
-        { name: 'Brunch', amount: 6 }
-    ];
-    
-    const total = budgetItems.reduce((sum, item) => sum + item.amount, 0);
-    return total;
+function calculateTotalBudget(participants = 8) {
+    // Budget alimentaire et matériel créatif (achat groupé)
+    const courses = 195;
+    const materielCreatif = 25;
+    // Activités payantes par personne
+    const activitesParPersonne = 20;
+    // Total groupe
+    const totalGroupe = courses + materielCreatif + activitesParPersonne * participants;
+    // Total par personne
+    const totalParPersonne = totalGroupe / participants;
+    return { totalGroupe, totalParPersonne };
 }
 
 // Fonction pour mettre à jour le budget total affiché
 function updateBudgetTotal() {
-    const totalAmount = calculateTotalBudget();
+    const participants = countConfirmedParticipants() || 8;
+    const { totalGroupe, totalParPersonne } = calculateTotalBudget(participants);
     const totalElement = document.querySelector('.total-amount');
     if (totalElement) {
-        totalElement.textContent = `${totalAmount}€`;
+        totalElement.textContent = `${totalGroupe.toFixed(2)}€`;
+    }
+    const perPersonElement = document.querySelector('.total-per-person');
+    if (perPersonElement) {
+        perPersonElement.textContent = `Soit ${totalParPersonne.toFixed(2)}€ par personne`;
     }
 }
 
